@@ -1,0 +1,6 @@
+<h2>Delete Entry</h2>
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete "{{entry.title}}"
+    <input type="submit" value="Delete" />
+    <input type="reset" value="Cancel" />
+</form>

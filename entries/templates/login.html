@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>My Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static "header.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "footer.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "entries/forms.css" %}" >
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">My Diary</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><input type="text" placeholder="Search.."></li>
+        <li><a class="menu_icon"><img src="{% static "img/menu_icon.png" %}" alt="menu_icon" height="32" width="32"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="divform">
+        <form style="padding-left: 20px; padding-bottom: 20px; action="" >
+          <h1>Sign In</h1>
+          <p style="font-size: 16px;">Please fill in this form to sign in.</p>
+          <input type="text" placeholder="Enter Email" align="right" name="first_name" required autofocus >
+          <br />
+          <br />
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <br />
+          <br />
+          <button type="submit" class="submitbtn">Sign In</button>
+          &nbsp &nbsp
+          <button type="button" class="cancelbtn">Cancel</button>
+          <br />
+          <a href="resetpassword.html"> Reset Password</a>
+        </form>
+      </div>
+  </section>
+
+  <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="index.html">Home |</a>
+          
+          <a href="#">Sign up |</a>
+          
+          <a href="#">Log in |</a>
+          
+          <a href="#">Contacts |</a>
+          
+          <a href="#">About</a>
+        </p>
+
+        <p class="footer-company-name"> &copy; 2019 My Diary</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <p><span>Lumumba Drive, Roysambu, Nairobi</span></p>
+        </div>
+
+        <div>
+          <p>+254700000000</p>
+        </div>
+
+        <div>
+          
+          <p><a href="mailto:info@politico.co.ke">info@mydiary.co.ke</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About My Diary</span>
+          We provide an online platform where you can record all the events and memories you have or you had in the past
+        </p>
+
+        <div class="footer-icons">
+          
+          <a><img src="{% static "img/fb.png" %}" alt="facebook" height="32" width="32"></a>
+          &nbsp &nbsp
+          <a><img src="{% static "img/twitter.png" %}" alt="twitter" height="32" width="32"></a>
+          &nbsp &nbsp
+          <a><img src="{% static "img/in.jpg" %}" alt="linkedin" height="32" width="32"></a>
+          &nbsp &nbsp
+          <a><img src="{% static "img/git.png" %}" alt="github" height="32" width="32"></a>
+
+
+        </div>
+
+      </div>
+
+    </footer>
+</body>
+</html>

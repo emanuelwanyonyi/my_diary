@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="main_section">
+    <div id="entry" class="forms">
+      <h1>{{ home_page_title }}
+        <form method="POST" action="." enctype="multipart/form-data">
+          <h1>New Record</h1>
+          {% csrf_token %}
+          {{ form.as_p}}
+          <br />
+          <br />
+          <button type="submit" class="submitbtn">Save</button>
+          &nbsp &nbsp
+          <button type="button" class="cancelbtn">Cancel</button>
+        </form>
+      </div>
+  </section>
+{% endblock %}   

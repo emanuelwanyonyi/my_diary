@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+  <title>My Diary</title>
+  <link rel="stylesheet" type="text/css" href="{% static "entries/dashboard.css" %}">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul id="displayBlock">
+        <li><a href="#">Entries</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div>
+    <p>{{ entry.title }}</p>
+    <p>{{ entry.event }}</p>
+    <p>{{ entry.date_posted }}</p>
+  </div>
+  </body>
+</html>

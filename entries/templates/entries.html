@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+  <title>My Diary</title>
+  <link rel="stylesheet" type="text/css" href="{% static "css/entries.css" %}">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul id="displayBlock">
+        <li><a href="{% url 'create' %}">+ New Entry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="row">
+    {% for entry in entries %}
+    <div class="col-md-4">
+      <div class="card mb-2">
+        
+        <div class="card-body">
+          <li>{{ entry.title }}</li>
+          <a href="{% url 'details' id=entry.id %}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+
+  </body>
+  </html>

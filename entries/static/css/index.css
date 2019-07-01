@@ -1,0 +1,29 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box; /* Responsive grid-view */
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 5px;
+    padding-top: 30px;
+}
+body {
+  background-color: #f3f3f3;
+}
+
+
+.banner{
+  width: 100;
+  height: calc(100vh - 100px); /* device height subtract the header height */
+}
+
+.banner div {
+  font-family: Garamond;
+  font-size: 26px; 
+  color: #0000ff;
+  text-align: center;
+  padding: 70px 0;
+}
